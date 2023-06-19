@@ -1,0 +1,164 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#box1 {
+  width: 530px;
+  height: 630px;
+  background-image: url('https://res.cloudinary.com/davims6ce/image/upload/v1597557707/1_pblr2h.png');
+  position: absolute;
+  bottom: -100%;
+  left: 30%;
+  animation: anim 2s forwards, anim2 3s forwards 3s;
+}
+
+#box1::after {
+  content: '';
+  position: absolute;
+  width: 530px;
+  background-image: url('https://res.cloudinary.com/davims6ce/image/upload/v1597557706/2_meanqt.png');
+  height: 630px;
+  left: 0px;
+  z-index: -1;
+}
+
+@keyframes anim{
+  from {
+      bottom: -100%;
+  }
+  to {
+      bottom: 0%;
+  }
+}
+
+@keyframes anim2{
+  from {
+      left: 30%;
+      width: 530px;
+  }
+
+  to {
+      width: 0px;
+      left: 50%;
+
+  }
+}
+
+#box2 {
+  width: auto;
+  height: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #fff;
+  font-size: 10em;
+  font-weight: 500;
+  line-height: 130px;
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  overflow: hidden;
+}
+
+#text {
+  width: 50%;
+  position: relative;
+  left: -100%;
+  animation: anim3 2s forwards 3s;
+  color: #fff;
+}
+
+@keyframes anim3 {
+  from {
+      left: -100%;
+  }
+
+  to {
+      left: 0%;
+  }
+
+}
+
+#box3 {
+  overflow: hidden;
+}
+
+#container {
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  animation: anim4 2s forwards 2.5s;
+}
+
+#logo {
+  float: left;
+  margin-left: 60px;
+  margin-top: 20px;
+  display: flex;
+}
+
+#logo img {
+  width: 150px;
+}
+
+#menu {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-right: 40px;
+  margin-top: 20px;
+  float: right;
+
+}
+
+#menu ul {
+  list-style: none;
+}
+
+#menu ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+@keyframes anim4{
+   from{
+      top: -100%;
+  } 
+  to{
+      top: 0%;
+   }
+}
